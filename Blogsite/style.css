@@ -1,0 +1,149 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* BODY */
+body {
+    background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: #222;
+    color: #fff;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: #333;
+    color: #fff;
+}
+
+/* BLOG CONTAINER */
+.blog-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* BLOG CARD */
+.blog-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.blog-card h2 {
+    margin-bottom: 0.5rem;
+}
+
+.date {
+    font-size: 0.85rem;
+    color: gray;
+    margin-bottom: 0.5rem;
+}
+
+.blog-card a {
+    display: inline-block;
+    margin-top: 0.8rem;
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #222;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+
+    #menu-toggle:checked + .menu-icon + .nav-links {
+        display: flex;
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+    .blog-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .blog-card {
+        width: calc(50% - 1rem);
+    }
+}
+
+/* Desktops */
+@media (min-width: 1024px) {
+    .blog-card {
+        width: calc(33.333% - 1rem);
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
